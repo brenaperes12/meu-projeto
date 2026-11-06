@@ -40,14 +40,8 @@ function Login({ onEntrar }) {
               className="form-control"
               placeholder="Senha"
             />
-
-            <button
-    type="button"
-    className="btn btn-primary entrar"
-    onClick={onEntrar}
->
-    Entrar
-</button>
+            
+            <button type="button" className="btn btn-primary entrar" onClick={onEntrar}>Entrar</button>
           </form>
 
           <a href="#" className="esqueceu">
@@ -67,25 +61,6 @@ function Login({ onEntrar }) {
           </div>
         </div>
       </div>
-
-      <rodape>
-        <div className="links">
-          <a href="#">Meta</a>
-          <a href="#">Sobre</a>
-          <a href="#">Blog</a>
-          <a href="#">Carreiras</a>
-          <a href="#">Ajuda</a>
-          <a href="#">API</a>
-          <a href="#">Privacidade</a>
-          <a href="#">Termos</a>
-          <a href="#">Localizações</a>
-          <a href="#">Instagram Lite</a>
-        </div>
-
-        <p>
-          Português (Brasil) © 2026 Instagram from Meta
-        </p>
-      </rodape>
     </div>
   );
 }

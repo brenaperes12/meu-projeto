@@ -9,7 +9,8 @@ function App() {
     const [pagina, setPagina] = useState("feed");
 
     if (!logado) {
-        return <Login onEntrar={() => setLogado(true)} />;
+        return <Login onEntrar={() => setLogado(true)}/>;
+        
     }
 
     return (

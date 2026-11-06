@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./Feed.css";
-import { Link } from "react-router-dom";
+
 
 function Feed() {
 
@@ -43,26 +43,11 @@ function Feed() {
                 </div>
 
                 <nav className="feed-menu">
-                    <a href="#"><i className="bi bi-house-door-fill"></i></a>
-                    <a href="#"><i className="bi bi-camera-reels"></i></a>
                     <a href="#">
-                        <i className="bi bi-send"></i>
-                        <span className="notificacao">2</span>
-                    </a>
-                    <a href="#"><i className="bi bi-search"></i></a>
-                    <a href="#"><i className="bi bi-heart"></i></a>
-                    <a href="#"><i className="bi bi-plus-square"></i></a>
-                    
-                    <a href="#">
-                        
-                        <img src="https://placehold.co/80x80?text=EU" alt="Perfil"/>
+                        <img src="https://placehold.co/80x80" alt="Perfil"/>
+                       
                     </a>
                 </nav>
-
-                <div className="feed-menu-final">
-                    <a href="#"><i className="bi bi-list"></i></a>
-                    <a href="#"><i className="bi bi-grid"></i></a>
-                </div>
             </aside>
 
             <main className="feed-conteudo">
@@ -71,11 +56,10 @@ function Feed() {
                         <div className="feed-story" key={nome}>
                             <div className="feed-story-borda">
                                 <img
-                                    src={`https://placehold.co/100x100?text=${nome}`}
+                                    src={`https://placehold.co/100x100`}
                                     alt={nome}
                                 />
                             </div>
-
                             <span>{nome}</span>
                         </div>
                     ))}
@@ -93,13 +77,11 @@ function Feed() {
                                 <div className="feed-post-usuario">
                                     <strong>
                                         {post.usuario}
-                                        <i className="bi bi-patch-check-fill"></i>
                                     </strong>
                                     <span>{post.tempo}</span>
                                 </div>
 
                                 <button className="feed-mais">
-                                    <i className="bi bi-three-dots"></i>
                                 </button>
                             </div>
 
@@ -108,33 +90,6 @@ function Feed() {
                                 className="feed-foto"
                                 alt="Publicação"
                             />
-
-                            <div className="feed-indicadores">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-
-                            <div className="feed-acoes">
-                                <div className="feed-acoes-esquerda">
-                                    <button onClick={() => curtir(post.id)}>
-                                        <i className={`bi ${curtidos.includes(post.id) ? "bi-heart-fill feed-curtido" : "bi-heart"}`}></i>
-                                    </button>
-                                    <button>
-                                        <i className="bi bi-chat"></i>
-                                    </button>
-                                    <button>
-                                        <i className="bi bi-arrow-repeat"></i>
-                                    </button>
-                                    <button>
-                                        <i className="bi bi-send"></i>
-                                    </button>
-                                </div>
-                                <button>
-                                    <i className="bi bi-bookmark"></i>
-                                </button>
-                            </div>
 
                             <div className="feed-legenda">
                                 <strong>
