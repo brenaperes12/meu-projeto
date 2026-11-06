@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./Login.css";
 
-function Login() {
+function Login({ onEntrar }) {
   return (
     <div className="pagina">
       <div className="lado-esquerdo">
@@ -15,7 +15,7 @@ function Login() {
         <div className="apresentacao">
           <h1>
             Veja momentos do dia a dia dos seus
-            <br />
+            <br/>
             <span>amigos próximos.</span>
           </h1>
 
@@ -41,9 +41,13 @@ function Login() {
               placeholder="Senha"
             />
 
-            <button type="button" className="btn btn-primary entrar">
-              Entrar
-            </button>
+            <button
+    type="button"
+    className="btn btn-primary entrar"
+    onClick={onEntrar}
+>
+    Entrar
+</button>
           </form>
 
           <a href="#" className="esqueceu">
@@ -64,7 +68,7 @@ function Login() {
         </div>
       </div>
 
-      <footer>
+      <rodape>
         <div className="links">
           <a href="#">Meta</a>
           <a href="#">Sobre</a>
@@ -81,7 +85,7 @@ function Login() {
         <p>
           Português (Brasil) © 2026 Instagram from Meta
         </p>
-      </footer>
+      </rodape>
     </div>
   );
 }
