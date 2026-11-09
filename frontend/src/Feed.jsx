@@ -7,6 +7,7 @@ import "./Feed.css";
 
 function Feed() {
 
+    
     const [posts, setPosts] = useState([]);
     const [sugestoes, setSugestoes] = useState([]);
     const [curtidos, setCurtidos] = useState([]);
@@ -38,6 +39,10 @@ function Feed() {
     return (
         <div className="feed-pagina">
             <aside className="feed-sidebar">
+
+                
+
+
                 <div className="feed-logo">
                     <img src="https://static.cdninstagram.com/rsrc.php/yO/r/Ny6hrBVLYjl.webp" height={30} alt="logo"/>
                 </div>
